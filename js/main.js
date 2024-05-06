@@ -1,24 +1,3 @@
-// 여기서 document 는 html을 의미한다고 생각하면 됌
-const searchEL = document.querySelector(".search");
-const searchInputEl = searchEL.querySelector("input");
-
-searchEL.addEventListener("click", function () {
-  //클릭되면 어떤 logic을 처리할것인지 적어줌
-  searchInputEl.focus();
-});
-
-searchInputEl.addEventListener("focus", function () {
-  searchEL.classList.add("focused");
-  //   set = 지정. html 속성은 attribute.
-  searchInputEl.setAttribute("placeholder", "통합검색");
-});
-
-searchInputEl.addEventListener("blur", function () {
-  searchEL.classList.remove("focused");
-  //   set = 지정. html 속성은 attribute.
-  searchInputEl.setAttribute("placeholder", "");
-});
-
 // 뱃지 요소가 스크롤하다가 일정값이 넘어가면 스르륵 사라지는 기능!
 const badgeEl = document.querySelector("header .badges");
 // window는 브라우저 탭 하나라고 이해하면 됌
@@ -188,8 +167,3 @@ spyEls.forEach(function (spyEl) {
 });
 
 // 오... 개발자 도구 열어서 확인하면 scroll-spy뒤에 show가 나타났다 안 나타났다 하넹
-
-const thisYear = document.querySelector(".this-year");
-// python에 datetime인갑네..
-// textcontent는 글자 내용 지정 혹은 찾아내는거
-thisYear.textContent = new Date().getFullYear();
